@@ -1,21 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View,Button } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import * as React from "react";
+import { Text, View, Button, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
- const WelcomeScreen = () =>{
-      const onPressGetStarted = () =>{
-           console.log('I was pressed')
-  }
+const WelcomeScreen = () => {
+  const navigation = useNavigation();
+
+  const onPressGetStarted = () => {
+    //console.info("I was pressed");
+    navigation.replace("Login");
+  };
+
   return (
-    <View>
+    <View className="flex-1 items-center m-3">
       <Button
-  onPress={onPressGetStarted}
-  title="Get Started"
-  color="#841584"
-  accessibilityLabel="Learn more about this purple button"/>
-      <Text className="text-red-50">Welcome Screen</Text>
+        onPress={onPressGetStarted}
+        title="Get Started"
+        color="#841584"
+        accessibilityLabel="Learn more about this purple button"
+      />
     </View>
-    
   );
-}
+};
 
-export default WelcomeScreen
+export default WelcomeScreen;
