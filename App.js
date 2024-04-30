@@ -1,13 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';
 
-export default function App() {
+import WelcomeStack from './screens/WelcomeStack';
+
+ const App =() =>{
   return (
-    <View>
-     
-      <Text className="text-red-50">Hello ..! Welcome From Roshan Dalvi</Text>
-      <StatusBar style="auto" />
+    <View className='flex-1'>
+         <WelcomeStack/>
     </View>
+    
   );
 }
 
+export default App
