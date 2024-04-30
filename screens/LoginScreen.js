@@ -5,7 +5,6 @@ import { Text, View } from 'react-native';
   return (
     <View>    
       <Text className="text-red-50"> Login Screen</Text>
-      <StatusBar style="auto" />
     </View>
     
   );
