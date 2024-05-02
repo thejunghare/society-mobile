@@ -6,7 +6,7 @@ import WelcomeStack from './screens/WelcomeStack';
   return (
     <View className='flex-1'>
          <WelcomeStack/>
-         {/*<Text className="text-black-50">Welcome Screen</Text>*/}
+         {/* <Text className="text-black-50">Welcome Screen</Text> */}
     </View>  
   );
 }
