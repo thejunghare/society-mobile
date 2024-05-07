@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import * as React from "react";
-import { Text, View, Button, Pressable } from "react-native";
+import { SafeAreaView,ScrollView, Text, View, Button, Pressable, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const WelcomeScreen = () => {
@@ -12,14 +12,14 @@ const WelcomeScreen = () => {
   };
 
   return (
-    <View className="flex-1 items-center m-3">
+    <SafeAreaView className="flex-1 m-3 bg-white">
       <Button
         onPress={onPressGetStarted}
         title="Get Started"
-        color="#841584"
-        accessibilityLabel="Learn more about this purple button"
+        color="red"
+        disabled={false}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 

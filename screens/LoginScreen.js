@@ -1,14 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import * as React from 'react';
-import { Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import * as React from "react";
+import { Text, View, Button } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
- const LoginScreen = () =>{
+const LoginScreen = () => {
+  const navigation = useNavigation();
+
   return (
-    <View>    
-      <Text className="text-red-50"> Login Screen</Text>
-    </View>
-    
-  );
-}
+    <View className={"flex-1 items-center"}>
+      <Button
+        title="Login"
+        onPress={() => {
+          navigation.navigate("Reset Password");
+        }}
+      />
 
-export default LoginScreen
+      <StatusBar style="dark" />
+    </View>
+  );
+};
+
+export default LoginScreen;
