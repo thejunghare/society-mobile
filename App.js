@@ -1,20 +1,22 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+// import WelcomeStack from './screens/welcomeStack';
 
-export default function App() {
+// mport WelcomeScreen from './screens/welcomeScreen';
+ import RegisterScreen from './screens/RegisterScreen';
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hello..! Welcome From Aditya Padale.</Text>
+    <View style={{ flex: 1 }}>
       <StatusBar style="auto" />
+      {/* Render the WelcomeStack component */}
+      <RegisterScreen />
+      {/* <WelcomeStack /> */}
+      {/* Alternatively, you can render individual screens like this */}
+      {/* <WelcomeScreen /> */}
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
