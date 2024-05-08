@@ -1,25 +1,48 @@
-import { StatusBar } from "expo-status-bar";
+import 'react-native-gesture-handler';
 import * as React from "react";
-import { Text, View } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from '@react-navigation/native';
+import { IconButton } from 'react-native'
 
 import WelcomeScreen from "./screens/WelcomeScreen";
 import LoginScreen from "./screens/LoginScreen";
-import ForgotScreenThree from "./screens/ForgotScreenThree";
+import BottomNavigator from "./screens/BottomNavigator";
+import HeaderComponent from './shared/HeaderComponent';
 
 const Stack = createStackNavigator();
 
+const StackNavigator = () => {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen
+                name="Welcome"
+                options={{ headerShown: false }}
+                component={WelcomeScreen}
+            />
+
+            <Stack.Screen
+                name="Login"
+                options={{ headerShown: false }}
+                component={LoginScreen}
+            />
+
+            <Stack.Screen
+            name='Dashboard'
+                component={BottomNavigator}
+                options={{
+                   headerTitle:() => <HeaderComponent/>
+                }}
+            />
+        </Stack.Navigator>
+    );
+}
+
 const App = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Welcome" options={{headerShown:false}} component={WelcomeScreen} />
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Reset Password"  component={ForgotScreenThree} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+    return (
+        <NavigationContainer>
+            <StackNavigator />
+        </NavigationContainer>
+    );
 };
 
 export default App;
