@@ -4,10 +4,10 @@
     "slug": "society-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/Images/logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/Images/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
