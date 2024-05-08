@@ -1,7 +1,7 @@
 // import React from 'react';
 // import { View, StyleSheet } from 'react-native';
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, Alert, Image } from 'react-native';
+import { View, Text, TextInput, Button, Alert, Image, TouchableOpacity } from 'react-native';
 
 const RegisterScreen = () => {
     const [fullName, setFullName] = useState('');
@@ -36,6 +36,11 @@ const RegisterScreen = () => {
         // .catch(error => {
         //     console.error("Error:", error);
         // });
+    };
+
+    const handleSignIn = () => {
+        // Your sign-in logic here
+        console.log("Sign in clicked");
     };
 
     return (
@@ -74,7 +79,7 @@ const RegisterScreen = () => {
             <Button
               
                 title="Register"
-                color="#00a877"
+                color="#3EB489"
                 
                 
 
@@ -82,7 +87,9 @@ const RegisterScreen = () => {
             />
             </View>
             <Text style={{fontSize:14,  marginBottom: 10, color:'#000000', fontStyle:'poppins'}}>Already have an account?
+            <TouchableOpacity onPress={handleSignIn}>
             <Text style={{fontSize:14,  marginBottom: 10, color:'blue', fontStyle:'poppins'}}>Sign in</Text>
+            </TouchableOpacity>
             </Text>
             
         </View>
