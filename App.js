@@ -6,15 +6,19 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import WelcomeScreen from "./screens/WelcomeScreen";
 import LoginScreen from "./screens/LoginScreen";
+import DashboardScreen from "./screens/DashboardScreen";
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <View className='flex-1'>
-         <WelcomeStack/>
-         {/*<Text className="text-black-50">Welcome Screen</Text>*/}
-    </View>  
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Dashboard" component={DashboardScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
