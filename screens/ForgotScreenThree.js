@@ -1,17 +1,17 @@
-import React from "react";
-import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, View, Text, StyleSheet } from "react-native";
-import { TextInput, Button, Icon } from 'react-native-paper'
+import * as React from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView, View, Text, StyleSheet } from 'react-native';
+import { TextInput, Button } from 'react-native-paper'
 
 const ForgotScreenThree = () => {
   return (
-    <SafeAreaView className={"bg-white"}>
-      <View className={"h-screen flex justify-between"}>
+    <SafeAreaView className={'bg-white'}>
+      <View className={'h-screen flex justify-between'}>
         <View className={'h-3/6 mx-5 flex  justify-around'}>
 
           <View>
-            <Text className={"text-center text-2xl"}>Reset Password?</Text>
-            <Text className={"text-sm text-center text-slate-400"}>
+            <Text className={'text-center text-2xl'}>Reset Password?</Text>
+            <Text className={'text-sm text-center text-slate-400'}>
               You are step away from accessing your account!
             </Text>
           </View>
@@ -50,7 +50,7 @@ const ForgotScreenThree = () => {
 
         </View>
 
-        <View className={"h-28 border-t border-slate-200"}>
+        <View className={'h-28 border-t border-slate-200'}>
           <Text className={'p-3 text-sm font-semibold text-center'}>
             Already have an account?
             <Text className={'text-society-green'}> Sign in</Text>
@@ -59,7 +59,7 @@ const ForgotScreenThree = () => {
 
       </View>
 
-      <StatusBar style='dark' />
+      <StatusBar style='auto' />
     </SafeAreaView>
   );
 };

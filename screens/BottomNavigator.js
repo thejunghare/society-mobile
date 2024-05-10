@@ -7,12 +7,12 @@ import SettingsScreen from './SettingsScreen';
 const BottomNavigator = () => {
     const [index, setIndex] = React.useState(0);
     const [routes] = React.useState([
-        { key: 'dashboard', title: 'Dashboard', focusedIcon: 'home', unfocusedIcon: 'home-outline' },
+        { key: 'home', title: 'Home', focusedIcon: 'home', unfocusedIcon: 'home-outline' },
         { key: 'settings', title: 'Settings', focusedIcon: 'cog',unfocusedIcon: 'cog-outline' },
     ]);
 
     const renderScene = BottomNavigation.SceneMap({
-        dashboard: DashboardScreen,
+        home: DashboardScreen,
         settings: SettingsScreen,
     });
     return (
