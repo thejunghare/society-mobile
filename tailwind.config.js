@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./App.{js,jsx,ts,tsx}", "./screens/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        'society-green': '#3EB489',
+        'society-offwhite': '#f2f2f2'
+      }
+    },
   },
   plugins: [],
 }

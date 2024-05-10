@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "society-mobile",
+    "name": "mySociety",
     "slug": "society-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/Images/logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/Images/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,12 +19,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/Images/logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.thejunghare.mysociety"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5e77028e-18f4-4415-b24b-beeda7bebc56"
+      }
     }
   }
 }
