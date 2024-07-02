@@ -14,10 +14,10 @@ import { useNavigation } from "@react-navigation/native";
      // Login Screen Design Start
      <SafeAreaView className={"flex-1 max-h-screen bg-white"}>
            <View className="flex items-center max-h-50 " >
-                  <Image source={require('../assets/Images/logo.png')}  style={{ width: 124, height: 88, marginTop: 28 }}/>
+                  <Image source={require('../../assets/Images/Logo.png')}  style={{ width: 124, height: 88, marginTop: 28 }}/>
                   <Text className="font-bold text-3xl mt-2">Welcome Back!</Text> 
                   <Text className=" text-lg mt-4 ">Manage your society bills, </Text>
-                  <Text className="text-lg "> payments, services, complaints </Text>  
+                  <Text className="text-lg "> payments, services,complaints </Text>  
            </View>
            <View className="flex items-center  max-h-50 mt-36 ">
                  <TextInput
