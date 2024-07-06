@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors:{
         'society-green': '#3EB489',
-        'society-offwhite': '#f2f2f2'
+        'society-offwhite': '#f2f2f2',
+        'forgotpass-Teal': '#2dd4bf'
       }
     },
   },
