@@ -11,7 +11,26 @@ const LoginScreen = () => {
   const navigation = useNavigation();
   
   const onPressGetStarted = () => {
-    navigation.replace("Dashboard");
+//     navigation.replace("Dashboard");
+          fetch('http://localhost:3000/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              navigation.replace("Dashboard");
+            } else {
+              Alert.alert('Login Failed', data.message);
+            }
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+
   };
 
   return (
@@ -52,7 +71,8 @@ const LoginScreen = () => {
             secureTextEntry
             left={<PaperTextInput.Icon icon="eye" />}
             className="mb-4 rounded-3xl "
-          /><TouchableOpacity onPress={(ForgotScreenThree) => {}}>
+          />
+          <TouchableOpacity onPress={() => {}}>
            <Text className="text-center font-bold text-lg mt-3 text-forgotpass-Teal">Forgot Password</Text>      
            </TouchableOpacity>
         </View>
