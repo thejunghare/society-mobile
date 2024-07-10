@@ -1,13 +1,48 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-import WelcomeStack from './screens/WelcomeStack';
+import 'react-native-gesture-handler';
+import * as React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from '@react-navigation/native';
+import { IconButton } from 'react-native'
 
- const App =() =>{
-  return (
-    <View className='flex-1'>
-         <WelcomeStack/>
-         {/*<Text className="text-black-50">Welcome Screen</Text>*/}
-    </View>  
-  );
+import WelcomeScreen from "./src/screens/WelcomeScreen";
+import LoginScreen from "./src/screens/LoginScreen";
+import BottomNavigator from "./src/screens/BottomNavigator";
+import HeaderComponent from './src/shared/HeaderComponent';
+
+const Stack = createStackNavigator();
+
+const StackNavigator = () => {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen
+                name="Welcome"
+                options={{ headerShown: false }}
+                component={WelcomeScreen}
+            />
+
+            <Stack.Screen
+                name="Login"
+                options={{ headerShown: false }}
+                component={LoginScreen}
+            />
+
+            <Stack.Screen
+            name='Dashboard'
+                component={BottomNavigator}
+                options={{
+                   headerTitle:() => <HeaderComponent/>
+                }}
+            />
+        </Stack.Navigator>
+    );
 }
-export default App
+
+const App = () => {
+    return (
+        <NavigationContainer>
+            <StackNavigator />
+        </NavigationContainer>
+    );
+};
+
+export default App;
