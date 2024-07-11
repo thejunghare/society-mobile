@@ -4,10 +4,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
 import { IconButton } from 'react-native'
 
-import WelcomeScreen from "./screens/WelcomeScreen";
-import LoginScreen from "./screens/LoginScreen";
-import BottomNavigator from "./screens/BottomNavigator";
-import HeaderComponent from './shared/HeaderComponent';
+import WelcomeScreen from "./src/screens/WelcomeScreen";
+import LoginScreen from "./src/screens/LoginScreen";
+import BottomNavigator from "./src/screens/BottomNavigator";
+import HeaderComponent from './src/shared/HeaderComponent';
 
 const Stack = createStackNavigator();
 
