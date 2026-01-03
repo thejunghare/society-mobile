@@ -1,14 +1,15 @@
 {
   "expo": {
-    "name": "MemberApp",
-    "slug": "MemberApp",
+    "name": "Dwello",
+    "slug": "dwello",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/images/icon.png",
+    "scheme": "societyadmin",
+    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/images/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,14 +18,20 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
