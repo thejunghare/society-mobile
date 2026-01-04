@@ -1,4 +1,6 @@
 import { Stack } from "expo-router";
+import { TouchableOpacity, Text } from "react-native";
+import { router } from "expo-router";
 
 export default function AdminStackLayout() {
   return (
@@ -25,6 +27,28 @@ export default function AdminStackLayout() {
           headerShown: true,
           title: "Manage Member",
           headerTintColor: "#007AFF",
+        }}
+      />
+
+      <Stack.Screen
+        name="payment-modal"
+        options={{
+          presentation: "modal", // Makes it slide up like an iOS sheet
+          headerShown: true,
+          title: "Payment",
+          headerLeft: () => (
+            <TouchableOpacity onPress={() => router.back()}>
+              <Text style={{ color: "#007AFF", fontSize: 17 }}>Cancel</Text>
+            </TouchableOpacity>
+          ),
+        }}
+      />
+
+      <Stack.Screen
+        name="upgrade-modal"
+        options={{
+          presentation: "modal",
+          headerShown: false, // Full screen experience
         }}
       />
     </Stack>
